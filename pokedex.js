@@ -1,195 +1,191 @@
 exports.BattlePokedex = {
 
-swampamar:{num:-62,species:"Swampamar",types:["Dark","Water"],baseStats:{hp:103,atk:111,def:99,spa:86,spd:92,spe:76},abilities:{0:"Turnabout Torrent"},heightm:2,weightkg:75.5,color:"Blue",eggGroups:["Water 2"]}
-}
+swampamar:{num:-62,species:"Swampamar",types:["Dark","Water"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:103,atk:111,def:99,spa:86,spd:92,spe:76},abilities:{0:"Turnabout Torrent"},heightm:2,weightkg:75.5,color:"Blue",eggGroups:["Water 2"]}
+},
+swampamar-mega:{num:-62,species:"Swampamar-Mega",baseSpecies:"Swampamar",forme:"Mega",formeLetter:"M",types:["Dark","Water"],baseStats:{hp:103,atk:151,def:119,spa:96,spd:112,spe:86},abilities:{0:"Swift Swim"},heightm:2,weightkg:75.5,color:"Blue",eggGroups:["Water 2"]}
+},
+gyarotic:{num:-63,species:"Gyarotic",types:["Water"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:105,atk:102,def:89,spa:90,spd:122,spe:91},abilities:{0:"Intimidating Scales"},heightm:2,weightkg:75.5,color:"Blue",eggGroups:["Water 2"]}
+},
 
-swampamar-mega:{num:-62,species:"Swampamar-Mega",types:["Dark","Water"],baseStats:{hp:103,atk:151,def:119,spa:96,spd:112,spe:86},abilities:{0:"Swift Swim"},heightm:2,weightkg:75.5,color:"Blue",eggGroups:["Water 2"]}
-}
+gyarotic-mega:{num:-63,species:"Gyarotic-Mega",baseSpecies:"Gyarotic",forme:"Mega",formeLetter:"M",types:["Water","Dark"],baseStats:{hp:105,atk:132,def:119,spa:100,spd:152,spe:91},abilities:{0:"Mold Breaker"},heightm:2,weightkg:75.5,color:"Blue",eggGroups:["Water 2"]}
+},
 
-gyarotic:{num:-63,species:"Gyarotic",types:["Water"],baseStats:{hp:105,atk:102,def:89,spa:90,spd:122,spe:91},abilities:{0:"Intimidating Scales"},heightm:2,weightkg:75.5,color:"Blue",eggGroups:["Water 2"]}
-}
+azuninja:{num:-64,species:"Azuninja",types:["Water"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:96,atk:82,def:83,spa:91,spd:85,spe:96},abilities:{0:"Huge Torrent"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Water 1"]}
+},
 
-gyarotic-mega:{num:-63,species:"Gyarotic-Mega",types:["Water","Dark"],baseStats:{hp:105,atk:132,def:119,spa:100,spd:152,spe:91},abilities:{0:"Mold Breaker"},heightm:2,weightkg:75.5,color:"Blue",eggGroups:["Water 2"]}
-}
+chandeform:{num:-65,species:"Chandeform",types:["Ghost","Normal"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:75,atk:72,def:90,spa:117,spd:90,spe:85},abilities:{0:"Flash Weather"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Amorphous"]}
+},
 
-azuninja:{num:-64,species:"Azuninja",types:["Water"],baseStats:{hp:96,atk:82,def:83,spa:91,spd:85,spe:96},abilities:{0:"Huge Torrent"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Water 1"]}
-}
+mismatross:{num:-66,species:"Chandeform",types:["Electric","Ghost"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:82,atk:97,def:80,spa:115,spd:102,spe:87},abilities:{0:"Levitate"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Amorphous"]}
+},
 
-chandeform:{num:-65,species:"Chandeform",types:["Ghost","Normal"],baseStats:{hp:75,atk:72,def:90,spa:117,spd:90,spe:85},abilities:{0:"Flash Weather"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Amorphous"]}
-}
+haxardos:{num:-67,species:"Chandeform",types:["Dragon","Rock"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:96,atk:166,def:85,spa:72,spd:70,spe:87},abilities:{0:"Intense Rivalry"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
+},
 
-mismatross:{num:-66,species:"Chandeform",types:["Electric","Ghost"],baseStats:{hp:82,atk:97,def:80,spa:115,spd:102,spe:87},abilities:{0:"Levitate"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Amorphous"]}
-}
+pangleye:{num:-68,species:"Pangleye",types:["Fighting","Dark"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:82,atk:109,def:86,spa:77,spd:78,spe:64},abilities:{0:"Molded Stall"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Human-Like"]}
+},
 
-haxardos:{num:-67,species:"Chandeform",types:["Dragon","Rock"],baseStats:{hp:96,atk:166,def:85,spa:72,spd:70,spe:87},abilities:{0:"Intense Rivalry"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
-}
+pangleye-mega:{num:-68,species:"Pangleye-Mega",baseSpecies:"Pangleye-",forme:"Mega",formeLetter:"M",types:["Fighting","Dark"],baseStats:{hp:82,atk:119,def:136,spa:97,spd:128,spe:34},abilities:{0:"Magic Bounce"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Human-Like"]}
+},
 
-pangleye:{num:-68,species:"Pangleye",types:["Fighting","Dark"],baseStats:{hp:82,atk:109,def:86,spa:77,spd:78,spe:64},abilities:{0:"Molded Stall"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Human-Like"]}
-}
+garchados:{num:-69,species:"Garchados",types:["Ground","Water"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:111,atk:137,def:97,spa:80,spd:102,spe:101},abilities:{0:"Intimidate"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
+},
 
-pangleye-mega:{num:-68,species:"Pangleye-Mega",types:["Fighting","Dark"],baseStats:{hp:82,atk:119,def:136,spa:97,spd:128,spe:34},abilities:{0:"Magic Bounce"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Human-Like"]}
-}
+garchados-mega-x:{num:-69,species:"Garchados-Mega-X",baseSpecies:"Garchados",forme:"Mega",formeLetter:"M",types:["Ground","Water"],baseStats:{hp:111,atk:177,def:117,spa:120,spd:112,spe:91},abilities:{0:"Sand Force"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
+},
 
-garchados:{num:-69,species:"Garchados",types:["Ground","Water"],baseStats:{hp:111,atk:137,def:97,spa:80,spd:102,spe:101},abilities:{0:"Intimidate"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
-}
+garchados-mega-y:{num:-69,species:"Garchados-Mega-Y",baseSpecies:"Garchados",forme:"Mega",formeLetter:"M",types:["Ground","Dark"],baseStats:{hp:111,atk:167,def:127,spa:90,spd:132,spe:101},abilities:{0:"Mold Breaker"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
+},
 
-garchados-mega-x:{num:-69,species:"Garchados-Mega-X",types:["Ground","Water"],baseStats:{hp:111,atk:177,def:117,spa:120,spd:112,spe:91},abilities:{0:"Sand Force"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
-}
+wailcatty:{num:-70,species:"Wailcatty",types:["Ground","Water"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:130,atk:87,def:65,spa:82,spd:60,spe:75},abilities:{0:"Normal Veil"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
+},
 
-garchados-mega-y:{num:-69,species:"Garchados-Mega-Y",types:["Ground","Dark"],baseStats:{hp:111,atk:167,def:127,spa:90,spd:132,spe:101},abilities:{0:"Mold Breaker"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
-}
+gargatr:{num:-71,species:"Gargatr",types:["Dragon", "Water"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:106,atk:127,def:107,spa:89,spd:94,spe:100},abilities:{0:"Torrent"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
+},
 
-wailcatty:{num:-70,species:"Wailcatty",types:["Ground","Water"],baseStats:{hp:130,atk:87,def:65,spa:82,spd:60,spe:75},abilities:{0:"Normal Veil"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
-}
+gargatr-mega:{num:-71,species:"Gargatr-Mega",baseSpecies:"Gargatr",forme:"Mega",formeLetter:"M",types:["Dragon","Water"],baseStats:{hp:106,atk:167,def:127,spa:129,spd:104,spe:90},abilities:{0:"Sand Force"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
+},
 
-gargatr:{num:-71,species:"Gargatr",types:["Dragon", "Water"],baseStats:{hp:106,atk:127,def:107,spa:89,spd:94,spe:100},abilities:{0:"Torrent"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
-}
+dragon:{num:-72,species:"Dragon",types:["Dark", "Poison"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:88,atk:100,def:100,spa:121,spd:116,spe:81},abilities:{0:"Levipoison"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
+},
 
-gargatr-mega:{num:-71,species:"Gargatr-Mega",types:["Dragon","Water"],baseStats:{hp:106,atk:167,def:127,spa:129,spd:104,spe:90},abilities:{0:"Sand Force"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
-}
+hawlusharp:{num:-73,species:"Hawlusharp",types:["Fighting", "Dark"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:81,atk:118,def:97,spa:77,spd:76,spe:104},abilities:{0:"Armor Cast"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Human-Like"]}
+},
 
-dragon:{num:-72,species:"Dragon",types:["Dark", "Poison"],baseStats:{hp:88,atk:100,def:100,spa:121,spd:116,spe:81},abilities:{0:"Levipoison"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
-}
+cofagreelix:{num:-74,species:"Cofagreelix",types:["Steel", "Ghost"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:76,atk:77,def:182,spa:85,spd:95,spe:40},abilities:{0:"Mummy Fortitude"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Mineral"]}
+},
 
-hawlusharp:{num:-73,species:"Hawlusharp",types:["Fighting", "Dark"],baseStats:{hp:81,atk:118,def:97,spa:77,spd:76,spe:104},abilities:{0:"Armor Cast"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Human-Like"]}
-}
+cofagreelix-mega:{num:-74,species:"Cofagreelix-Mega",baseSpecies:"Cofagreelix",forme:"Mega",formeLetter:"M",types:["Steel", "Ghost"],baseStats:{hp:76,atk:117,def:212,spa:85,spd:125,spe:40},abilities:{0:"Sand Force"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Mineral"]}
+},
 
-cofagreelix:{num:-74,species:"Cofagreelix",types:["Steel", "Ghost"],baseStats:{hp:76,atk:77,def:182,spa:85,spd:95,spe:40},abilities:{0:"Mummy Fortitude"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Mineral"]}
-}
+joltlord:{num:-75,species:"Joltlord",types:["Electric", "Water"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:127,atk:87,def:62,spa:110,spd:80,spe:105},abilities:{0:"Oblivious Absorb"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
+},
 
-cofagreelix-mega:{num:-74,species:"Cofagreelix-Mega",types:["Steel", "Ghost"],baseStats:{hp:76,atk:117,def:212,spa:85,spd:125,spe:40},abilities:{0:"Sand Force"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Mineral"]}
-}
+vespicor:{num:-76,species:"Vespicor",types:["Dark", "Poison"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:82,atk:97,def:123,spa:72,spd:98,spe:77},abilities:{0:"Sand Pressure"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Bug"]}
+},
 
-joltlord:{num:-75,species:"Joltlord",types:["Electric", "Water"],baseStats:{hp:127,atk:87,def:62,spa:110,spd:80,spe:105},abilities:{0:"Oblivious Absorb"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
-}
+aggrodos:{num:-77,species:"Aggrodos",types:["Water", "Steel"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:92,atk:127,def:139,spa:70,spd:90,spe:75},abilities:{0:"FEAR"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
+},
 
-vespicor:{num:-76,species:"Vespicor",types:["Dark", "Poison"],baseStats:{hp:82,atk:97,def:123,spa:72,spd:98,spe:77},abilities:{0:"Sand Pressure"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Bug"]}
-}
+aggrodos-mega-x:{num:-77,species:"Aggrodos-Mega-X",baseSpecies:"Aggrodos",forme:"Mega",formeLetter:"M",types:["Water", "Dark"],,baseStats:{hp:92,atk:157,def:169,spa:80,spd:120,spe:75},abilities:{0:"Mold Breaker"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
+},
 
-aggrodos:{num:-77,species:"Aggrodos",types:["Water", "Steel"],baseStats:{hp:92,atk:127,def:139,spa:70,spd:90,spe:75},abilities:{0:"FEAR"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
-}
+aggrodos-mega-y:{num:-77,species:"Aggrodos-Mega-Y",baseSpecies:"Aggrodos",forme:"Mega",formeLetter:"M",types:["Water", "Steel"],baseStats:{hp:92,atk:157,def:189,spa:70,spd:110,spe:75},abilities:{0:"Filter"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
+},
 
-aggrodos-mega-x:{num:-77,species:"Aggrodos-Mega-X",types:["Water", "Dark"],baseStats:{hp:92,atk:157,def:169,spa:80,spd:120,spe:75},abilities:{0:"Mold Breaker"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
-}
+zorcanine:{num:-78,species:"Dragon",types:["Fire", "Dark"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:85,atk:117,def:80,spa:120,spd:80,spe:110},abilities:{0:"Illusion"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
+},
 
-aggrodos-mega-y:{num:-77,species:"Aggrodos-Mega-Y",types:["Water", "Steel"],baseStats:{hp:92,atk:157,def:189,spa:70,spd:110,spe:75},abilities:{0:"Filter"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
-}
+archedactyl:{num:-79,species:"Archedactyl",types:["Rock", "Flying"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:87,atk:132,def:75,spa:96,spd:80,spe:130},abilities:{0:"Aura of Failure"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Flying"]}
+},
 
-zorcanine:{num:-78,species:"Dragon",types:["Fire", "Dark"],baseStats:{hp:85,atk:117,def:80,spa:120,spd:80,spe:110},abilities:{0:"Illusion"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
-}
+archedactyl-mega:{num:-79,species:"Archedactyl-Mega",baseSpecies:"Archedactyl",forme:"Mega",formeLetter:"M",types:["Rock", "Flying"],baseStats:{hp:87,atk:162,def:95,spa:106,spd:100,spe:150},abilities:{0:"Tough Claws"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Flying"]}
+},
 
-archedactyl:{num:-79,species:"Archedactyl",types:["Rock", "Flying"],baseStats:{hp:87,atk:132,def:75,spa:96,spd:80,spe:130},abilities:{0:"Aura of Failure"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Flying"]}
-}
+chesdon:{num:-80,species:"Dragon",types:["Dark", "Poison"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:108,atk:119,def:130,spa:81,spd:83,spe:65},abilities:{0:"Cactus Power"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
+},
 
-archedactyl-mega:{num:-79,species:"Archedactyl-Mega",types:["Rock", "Flying"],baseStats:{hp:87,atk:162,def:95,spa:106,spd:100,spe:150},abilities:{0:"Tough Claws"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Flying"]}
-}
+mamodrill:{num:-81,species:"Mamodrill",types:["Ground", "Ice"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:120,atk:142,def:80,spa:70,spd:72,spe:94},abilities:{0:"Snow Force"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
+},
 
-chesdon:{num:-80,species:"Dragon",types:["Dark", "Poison"],baseStats:{hp:108,atk:119,def:130,spa:81,spd:83,spe:65},abilities:{0:"Cactus Power"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
-}
+heliodra:{num:-82,species:"Dragon",types:["Dragon", "Electric"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:86,atk:87,def:71,spa:119,spd:132,spe:104},abilities:{0:"Sandy Skin"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
+},
 
-mamodrill:{num:-81,species:"Mamodrill",types:["Ground", "Ice"],baseStats:{hp:120,atk:142,def:80,spa:70,spd:72,spe:94},abilities:{0:"Snow Force"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
-}
+scyscor:{num:-83,species:"Scyscor",types:["Bug", "Ground"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:82,atk:112,def:112,spa:60,spd:87,spe:110},abilities:{0:"Technicutter"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Bug"]}
+},
 
-heliodra:{num:-82,species:"Dragon",types:["Dragon", "Electric"],baseStats:{hp:86,atk:87,def:71,spa:119,spd:132,spe:104},abilities:{0:"Sandy Skin"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
-}
+joltry:{num:-84,species:"Joltry",types:["Grass", "Electric"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:87,atk:92,def:70,spa:110,spd:87,spe:115},abilities:{0:"ChlroVolt"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
+},
 
-scyscor:{num:-83,species:"Scyscor",types:["Bug", "Ground"],baseStats:{hp:82,atk:112,def:112,spa:60,spd:87,spe:110},abilities:{0:"Technicutter"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Bug"]}
-}
+azumaloom:{num:-85,species:"Azumaloom",types:["Water", "Grass"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:90,atk:100,def:90,spa:70,spd:80,spe:70},abilities:{0:"Healing Fat"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Fairy"]}
+},
 
-joltry:{num:-84,species:"Joltry",types:["Grass", "Electric"],baseStats:{hp:87,atk:92,def:70,spa:110,spd:87,spe:115},abilities:{0:"ChlroVolt"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
-}
+sawkape:{num:-86,species:"Sawkape",types:["Fire", "Fighting"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:85,atk:124,def:83,spa:77,spd:83,spe:106},abilities:{0:"Blazing Body"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Human-Like"]}
+},
 
-azumaloom:{num:-85,species:"Azumaloom",types:["Water", "Grass"],baseStats:{hp:90,atk:100,def:90,spa:70,spd:80,spe:70},abilities:{0:"Healing Fat"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Fairy"]}
-}
+weasol:{num:-86,species:"Weasol",types:["Dark", "Ice"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:82,atk:140,def:77,spa:75,spd:87,spe:115},abilities:{0:"Pressure"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
+},
 
-sawkape:{num:-86,species:"Sawkape",types:["Fire", "Fighting"],baseStats:{hp:85,atk:124,def:83,spa:77,spd:83,spe:106},abilities:{0:"Blazing Body"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Human-Like"]}
-}
+weasol-mega:{num:-86,species:"Weasol-Mega",baseSpecies:"Weasol",forme:"Mega",formeLetter:"M",types:["Dark", "Ice"],baseStats:{hp:82,atk:160,def:77,spa:115,spd:87,spe:155},abilities:{0:"Magic Bounce"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
+},
 
-weasol:{num:-86,species:"Weasol",types:["Dark", "Ice"],baseStats:{hp:82,atk:140,def:77,spa:75,spd:87,spe:115},abilities:{0:"Pressure"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
-}
+tyranichomp:{num:-87,species:"Tyranichomp",types:["Rock", "Dragon"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:114,atk:142,def:112,spa:97,spd:102,spe:91},abilities:{0:"Sand Stream"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
+},
 
-weasol-mega:{num:-86,species:"Weasol-Mega",types:["Dark", "Ice"],baseStats:{hp:82,atk:160,def:77,spa:115,spd:87,spe:155},abilities:{0:"Magic Bounce"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
-}
+tyranichomp-megax:{num:-87,species:"Tyranichomp-Mega-X",baseSpecies:"Tyranichomp",forme:"Mega",formeLetter:"M",types:["Rock", "Dragon"],baseStats:{hp:114,atk:172,def:152,spa:97,spd:122,spe:101},abilities:{0:"Sand Stream"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
+},
 
-tyranichomp:{num:-87,species:"Tyranichomp",types:["Rock", "Dragon"],baseStats:{hp:114,atk:142,def:112,spa:97,spd:102,spe:91},abilities:{0:"Sand Stream"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
-}
+tyranichomp-megay:{num:-87,species:"Tyranichomp-Mega-Y",baseSpecies:"Tyranichomp",forme:"Mega",formeLetter:"M",types:["Rock", "Dragon"],baseStats:{hp:114,atk:182,def:132,spa:137,spd:112,spe:81},abilities:{0:"Sand Force"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
+},
 
-tyranichomp-megax:{num:-87,species:"Tyranichomp",types:["Rock", "Dragon"],baseStats:{hp:114,atk:172,def:152,spa:97,spd:122,spe:101},abilities:{0:"Sand Stream"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
-}
+railie:{num:-88,species:"Railie",types:["Ice", "Electric"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:80,atk:95,def:77,spa:95,spd:90,spe:105},abilities:{0:"Static Storm"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Fairy"]}
+},
 
-tyranichomp-megay:{num:-87,species:"Tyranichomp",types:["Rock", "Dragon"],baseStats:{hp:114,atk:182,def:132,spa:137,spd:112,spe:81},abilities:{0:"Sand Force"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
-}
+railie-mega:{num:-88,species:"Railie-Mega",baseSpecies:"Railie",forme:"Mega",formeLetter:"M",types:["Ice", "Electric"],baseStats:{hp:80,atk:135,def:77,spa:135,spd:90,spe:125},abilities:{0:"Refigerate"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Fairy"]}
+},
 
-railie:{num:-88,species:"Railie",types:["Ice", "Electric"],baseStats:{hp:80,atk:95,def:77,spa:95,spd:90,spe:105},abilities:{0:"Static Storm"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Fairy"]}
-}
+charatos:{num:-89,species:"Charatos",types:["Fire","Water"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:97,atk:115,def:89,spa:95,spd:103,spe:101},abilities:{0:"Dreaded Flames"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
+},
 
-railie-mega:{num:-88,species:"Railie",types:["Ice", "Electric"],baseStats:{hp:80,atk:135,def:77,spa:135,spd:90,spe:125},abilities:{0:"Refigerate"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Fairy"]}
-}
+charatos-megay:{num:-89,species:"Charatos-Mega-Y",baseSpecies:"Charatos",forme:"Mega",formeLetter:"M",types:["Fire","Water"],baseStats:{hp:97,atk:135,def:89,spa:145,spd:133,spe:101},abilities:{0:"Drought"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
+},
 
-charatos:{num:-89,species:"Charatos",types:["Fire","Water"],baseStats:{hp:97,atk:115,def:89,spa:95,spd:103,spe:101},abilities:{0:"Dreaded Flames"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
-}
+charatos-megax:{num:-89,species:"Charatos-Mega-X",baseSpecies:"Charatos",forme:"Mega",formeLetter:"M",types:["Fire","Dragon"],baseStats:{hp:97,atk:161,def:122,spa:116,spd:103,spe:101},abilities:{0:"Tough Claws"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
+},
 
-charatos-megay:{num:-89,species:"Charatos-Mega-Y",types:["Fire","Water"],baseStats:{hp:97,atk:135,def:89,spa:145,spd:133,spe:101},abilities:{0:"Drought"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
-}
+charatos-megaz:{num:-89,species:"Charatos-Mega-Z",baseSpecies:"Charatos",forme:"Mega",formeLetter:"M",types:["Fire","Dark"],baseStats:{hp:97,atk:145,def:119,spa:105,spd:133,spe:101},abilities:{0:"Mold Breaker"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
+},
 
-charatos-megax:{num:-89,species:"Charatos-Mega-X",types:["Fire","Dragon"],baseStats:{hp:97,atk:161,def:122,spa:116,spd:103,spe:101},abilities:{0:"Tough Claws"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
-}
+aggrosaur:{num:-90,species:"Aggrosaur",types:["Grass","Steel"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:85,atk:106,def:141,spa:90,spd:90,spe:75},abilities:{0:"Rocky Growth"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
+},
 
-charatos-megaz:{num:-89,species:"Charatos-Mega-Z",types:["Fire","Dark"],baseStats:{hp:97,atk:145,def:119,spa:105,spd:133,spe:101},abilities:{0:"Mold Breaker"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
-}
+aggrosaur-mega-x:{num:-90,species:"Aggrosaur-Mega-X",baseSpecies:"Aggrosaur",forme:"Mega",formeLetter:"M",types:["Grass","Steel"],baseStats:{hp:85,atk:124,def:181,spa:112,spd:110,spe:75},abilities:{0:"Thick Fat"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
+},
 
-aggrosaur:{num:-90,species:"Aggrosaur",types:["Grass","Steel"],baseStats:{hp:85,atk:106,def:141,spa:90,spd:90,spe:75},abilities:{0:"Rocky Growth"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
-}
+aggrosaur-mega-y:{num:-90,species:"Aggrosaur-Mega-Y",baseSpecies:"Aggrosaur",forme:"Mega",formeLetter:"M",types:["Grass","Steel"],baseStats:{hp:85,atk:136,def:191,spa:90,spd:110,spe:75},abilities:{0:"Filter"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
+},
 
-aggrosaur-mega-x:{num:-90,species:"Aggrosaur-Mega-X",types:["Grass","Steel"],baseStats:{hp:85,atk:124,def:181,spa:112,spd:110,spe:75},abilities:{0:"Thick Fat"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
-}
+blastinja:{num:-91,species:"Blastinja",types:["Water","Dark"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:90,atk:104,def:98,spa:109,spd:103,spe:115},abilities:{0:"Torrent"},heightm:2,weightkg:75.5,color:"Blue",eggGroups:["Water 1"]}
+},
 
-aggrosaur-mega-y:{num:-90,species:"Aggrosaur-Mega-Y",types:["Grass","Steel"],baseStats:{hp:85,atk:136,def:191,spa:90,spd:110,spe:75},abilities:{0:"Filter"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Monster"]}
-}
+blastinja-mega:{num:-91,species:"Blastinja-Mega",baseSpecies:"Blastinja",forme:"Mega",formeLetter:"M",types:["Water","Dark"],baseStats:{hp:90,atk:124,def:118,spa:159,spd:113,spe:115},abilities:{0:"Mega Launcher"},heightm:2,weightkg:75.5,color:"Blue",eggGroups:["Water 1"]}
+},
 
-blastinja:{num:-91,species:"Blastinja",types:["Water","Dark"],baseStats:{hp:90,atk:104,def:98,spa:109,spd:103,spe:115},abilities:{0:"Torrent"},heightm:2,weightkg:75.5,color:"Blue",eggGroups:["Water 1"]}
-}
+skaria:{num:-92,species:"Skaria",types:["Steel","Dragon"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:80,atk:85,def:125,spa:65,spd:97,spe:85},abilities:{0:"Pristine"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Flying"]}
+},
 
-blastinja-mega:{num:-91,species:"Blastinja-Mega",types:["Water","Dark"],baseStats:{hp:90,atk:124,def:118,spa:159,spd:113,spe:115},abilities:{0:"Mega Launcher"},heightm:2,weightkg:75.5,color:"Blue",eggGroups:["Water 1"]}
-}
+skaria-mega:{num:-92,species:"Skaria-Mega",baseSpecies:"Skaria",forme:"Mega",formeLetter:"M",types:["Steel","Fairy"],baseStats:{hp:80,atk:125,def:145,spa:105,spd:97,spe:85},abilities:{0:"Pixilate"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Flying"]}
+},
 
-skaria:{num:-92,species:"Skaria",types:["Steel","Dragon"],baseStats:{hp:80,atk:85,def:125,spa:65,spd:97,spe:85},abilities:{0:"Pristine"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Flying"]}
-}
+magmozam:{num:-93,species:"Magmozam",types:["Fire", "Psychic"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:75,atk:82,def:66,spa:140,spd:105,spe:111},abilities:{0:"Inner Body"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Human-Like"]}
+},
 
-skaria-mega:{num:-92,species:"Skaria-Mega",types:["Steel","Fairy"],baseStats:{hp:80,atk:125,def:145,spa:105,spd:97,spe:85},abilities:{0:"Pixilate"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Flying"]}
-}
+magmozam-mega:{num:-93,species:"Magmozam-Mega",baseSpecies:"Magmozam",forme:"Mega",formeLetter:"M",types:["Fire","Psychic"],baseStats:{hp:75,atk:82,def:86,spa:180,spd:105,spe:141},abilities:{0:"Trace"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Human-Like"]}
+},
 
-magmozam:{num:-93,species:"Magmozam",types:["Fire", "Psychic"],baseStats:{hp:75,atk:82,def:66,spa:140,spd:105,spe:111},abilities:{0:"Inner Body"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Human-Like"]}
-}
+glakiss:{num:-93,species:"Glakiss",types:["Fairy","Ice"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:92,atk:75,def:97,spa:110,spd:107,spe:90},abilities:{0:"Serene Focus"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Fairy"]}
+},
 
-magmozam-mega:{num:-93,species:"Magmozam-Mega",types:["Fire","Psychic"],baseStats:{hp:75,atk:82,def:86,spa:180,spd:105,spe:141},abilities:{0:"Trace"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Human-Like"]}
-}
+glakiss-mega:{num:-93,species:"Glakiss-Mega",baseSpecies:"Glakiss",forme:"Mega",formeLetter:"M",types:["Fairy","Ice"],baseStats:{hp:92,atk:115,def:97,spa:150,spd:107,spe:110},abilities:{0:"Refigerate"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Fairy"]}
+},
 
-glakiss:{num:-93,species:"Glakiss",types:["Fairy","Ice"],baseStats:{hp:92,atk:75,def:97,spa:110,spd:107,spe:90},abilities:{0:"Serene Focus"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Fairy"]}
-}
+sharpedos:{num:-94,species:"Sharpedos",types:["Water"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:92,atk:132,def:69,spa:87,spd:80,spe:98},abilities:{0:"Intimidating Fangs"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Water 1"]}
+},
 
-glakiss-mega:{num:-93,species:"Glakiss-Mega",types:["Fairy","Ice"],baseStats:{hp:92,atk:115,def:97,spa:150,spd:107,spe:110},abilities:{0:"Refigerate"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Fairy"]}
-}
+sharpedos-megax:{num:-94,species:"Sharpedos-Mega-X",baseSpecies:"Sharpedos",forme:"Mega",formeLetter:"M",types:["Water"],baseStats:{hp:92,atk:152,def:99,spa:102,spd:105,spe:108},abilities:{0:"Strong Jaw"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Water 1"]}
+},
 
-sharpedos:{num:-94,species:"Sharpedos",types:["Water"],baseStats:{hp:92,atk:132,def:69,spa:87,spd:80,spe:98},abilities:{0:"Intimidating Fangs"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Water 1"]}
-}
+sharpedos-megay:{num:-94,species:"Sharpedos-Mega-Y",baseSpecies:"Sharpedos",forme:"Mega",formeLetter:"M",types:["Water","Dark"],baseStats:{hp:92,atk:162,def:99,spa:97,spd:110,spe:98},abilities:{0:"Mold Breaker"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Water 1"]}
+},
 
-sharpedos-megax:{num:-94,species:"Sharpedos-Mega-X",types:["Water"],baseStats:{hp:92,atk:152,def:99,spa:102,spd:105,spe:108},abilities:{0:"Strong Jaw"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Water 1"]}
-}
+vapornine:{num:-95,species:"Vapornine",types:["Water","Fire"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:120,atk:97,def:80,spa:115,spd:97,spe:90},abilities:{0:"Intimidating Absorb"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
+},
 
-sharpedos-megay:{num:-94,species:"Sharpedos-Mega-Y",types:["Water","Dark"],baseStats:{hp:92,atk:162,def:99,spa:97,spd:110,spe:98},abilities:{0:"Mold Breaker"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Water 1"]}
-}
+pidgetot:{num:-96,species:"Pidgetot",types:["Normal","Flying"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:89,atk:82,def:70,spa:91,spd:66,spe:106},abilities:{0:"Keen Feet"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
+},
 
-vapornine:{num:-95,species:"Vapornine",types:["Water","Fire"],baseStats:{hp:120,atk:97,def:80,spa:115,spd:97,spe:90},abilities:{0:"Intimidating Absorb"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
-}
-
-pidgetot:{num:-96,species:"Pidgetot",types:["Normal","Flying"],baseStats:{hp:89,atk:82,def:70,spa:91,spd:66,spe:106},abilities:{0:"Keen Feet"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Field"]}
-}
-
-pidgetot-mega:{num:-96,species:"Pidgetot-Mega",types:["Normal","Flying"],baseStats:{hp:89,atk:82,def:75,spa:156,spd:76,spe:126},abilities:{0:"No Guard"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Flying"]}
-}
-
-
+pidgetot-mega:{num:-96,species:"Pidgetot-Mega",baseSpecies:"Pidgetot",forme:"Mega",formeLetter:"M",types:["Normal","Flying"],baseStats:{hp:89,atk:82,def:75,spa:156,spd:76,spe:126},abilities:{0:"No Guard"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Flying"]}
+},
 blasterain:{num:-128,species:"Blasterain",types:["Water","Bug"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:84,atk:81,def:91,spa:92,spd:103,spe:79},abilities:{0:"Sea Monster"},heightm:1.6,weightkg:85.5,color:"Blue",eggGroups:["Water1"],otherFormes:["blasterainmega"]},
 blasterainmega:{num:-128,species:"Blasterain-Mega",baseSpecies:"Blasterain",forme:"Mega",formeLetter:"M",types:["Water","Bug"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:84,atk:101,def:111,spa:142,spd:113,spe:79},abilities:{0:"Mega Launcher"},heightm:1.6,weightkg:111.1,color:"Blue",eggGroups:["Water1"]},
 entaria:{num:-129,species:"Entaria",types:["Fire","Dragon"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:95,atk:110,def:100,spa:80,spd:90,spe:100},abilities:{0:"Under Pressure"},heightm:2.1,weightkg:198.0,color:"Red",eggGroups:["Undiscovered"],otherFormes:["entariamega"]},
@@ -225,9 +221,7 @@ sablemimez:{num:-144,species:"Sablemimez",types:["Ghost","Fairy"],genderRatio:{M
 sablemimezmega:{num:-144,species:"Sablemimez-Mega",baseSpecies:"Sablemimez",forme:"Mega",formeLetter:"M",types:["Ghost","Fairy"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:55,atk:80,def:130,spa:112,spd:152,spe:50},abilities:{0:"Magic Bounce"},heightm:1.6,weightkg:60.0,color:"Pink",eggGroups:["Human-Like"]},
 casting:{num:-145,species:"Casting",types:["Poison","Normal"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:78,atk:90,def:105,spa:88,spd:80,spe:75},abilities:{0:"Monsoon"},heightm:1.2,weightkg:9.5,color:"White",eggGroup:["Amorphous"]},
 casting-sunny:{num:-145,species:"Casting-Sunny",types:["Poison","Fire"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:78,atk:90,def:105,spa:88,spd:80,spe:75},abilities:{0:"Monsoon"},heightm:1.2,weightkg:9.5,color:"White",eggGroup:["Amorphous"]},
-
 casting-rainy:{num:-145,species:"Casting-Rainy",types:["Poison","Water"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:78,atk:90,def:105,spa:88,spd:80,spe:75},abilities:{0:"Monsoon"},heightm:1.2,weightkg:9.5,color:"White",eggGroup:["Amorphous"]},
-
 casting-icy:{num:-145,species:"Casting-Icy",types:["Poison","Ice"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:78,atk:90,def:105,spa:88,spd:80,spe:75},abilities:{0:"Monsoon"},heightm:1.2,weightkg:9.5,color:"White",eggGroup:["Amorphous"]},
 swank:{num:-146,species:"Swank",types:["Water","Steel"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:85,atk:125,def:105,spa:80,spd:90,spe:101},abilities:{0:"Positive Growth"},heightm:1.5,weightkg:81.9,color:"Blue",eggGroups:["Undiscovered"],otherFormes:["swankmega"]},
 swankmega:{num:-146,species:"Swankz-Mega",baseSpecies:"Swank",forme:"Mega",formeLetter:"M",types:["Water","Steel"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:85,atk:165,def:125,spa:90,spd:110,spe:91},abilities:{0:"Swift Swim"},heightm:1.5,weightkg:90.0,color:"Blue",eggGroups:["Undiscovered"]},
@@ -272,8 +266,6 @@ pidgemiemega:{num:-169,species:"Pidgemie-Mega",baseSpecies:"Pidgemie",forme:"Meg
 klazor:{num:-170,species:"Klazor",types:["Bug","Steel"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:75,atk:105,def:100,spa:82,spd:85,spe:61},abilities:{0:"Math Surge"},heightm:1.8,weightkg:117.5,color:"Red",eggGroups:["Undiscovered"],otherFormes:["klazormega"]},
 klazormega:{num:-170,species:"Klazor-Mega",baseSpecies:"Klazor",forme:"Mega",formeLetter:"M",types:["Bug","Steel"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:75,atk:125,def:140,spa:92,spd:105,spe:71},abilities:{0:"Technician"},heightm:1.8,weightkg:117.5,color:"Red",eggGroups:["Undiscovered"]},
 gorecanion:{num:-171,species:"Gorecanion",types:["Water","Fire"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:67,atk:97,def:112,spa:140,spd:90,spe:75},abilities:{0:"Swift Absorb"},heightm:1.7,weightkg:190.5,color:"Pink",eggGroup:["Undiscovered"]},
-
-
 }
 
 

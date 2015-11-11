@@ -1517,6 +1517,96 @@ onStart: function (pokemon) {
 		rating: 2,
 		num: 147
 	},
+	
+	
+
+{
+				
+"overwhelmingpresence": {
+		shortDesc: "This Pokemon's moves and their effects ignore the Abilities of other Pokemon.",
+		onStart: function (pokemon) {
+				this.add('-start', pokemon, 'Embargo');
+				this.add('-endability', pokemon);
+				this.singleEvent('End', this.getAbility(pokemon.ability), pokemon.abilityData, pokemon, pokemon, 'gastroacid')
+			},
+			// Item suppression implemented in BattlePokemon.ignoringItem() within battle-engine.js
+			// Ability suppression implemented in BattlePokemon.ignoringAbility() within battle-engine.js
+			onResidualOrder: 18,
+			onEnd: function (pokemon) {
+				this.add('-end', pokemon, 'Embargo');
+}		
+		id: "overwhelmingpresence",
+		name: "Overwhelming Presene",
+		rating: 3.5,
+		num: 104
+	},
+
+"monsoon": {
+        desc: "If this Pokemon is a Casting, its type changes to the current weather condition's type, except Sandstorm.",
+        shortDesc: "Casting's secondary type changes to the current weather condition's type, except Sandstorm.",
+        onUpdate: function (pokemon) {
+            if (pokemon.baseTemplate.species !== 'Casting' || pokemon.transformed) return;
+            var forme = null;
+            switch (this.effectiveWeather()) {
+            case 'sunnyday':
+            case 'desolateland':
+                if (pokemon.template.speciesid !== 'castingsunny') forme = 'Casting-Sunny';
+                break;
+            case 'raindance':
+            case 'primordialsea':
+                if (pokemon.template.speciesid !== 'castingrainy') forme = 'Casting-Rainy';
+                break;
+            case 'hail':
+                if (pokemon.template.speciesid !== 'castingsnowy') forme = 'Casting-Snowy';
+                break;
+            default:
+                if (pokemon.template.speciesid !== 'casting') forme = 'Casting';
+                break;
+            }
+            if (pokemon.isActive && forme) {
+                pokemon.formeChange(forme);
+                this.add('-formechange', pokemon, forme, '[msg]');
+            }
+        },
+        id: "monsoon",
+        name: "Monsoon",
+        rating: 3,
+        num: 300
+
+"monsoonaltered": {
+        desc: "If this Pokemon is a Casting, its type changes to the current weather condition's type, except Sandstorm.",
+        shortDesc: "Casting's secondary type changes to the current weather condition's type, except Sandstorm.",
+        onUpdate: function (pokemon) {
+            if (pokemon.baseTemplate.species !== 'Casting' || pokemon.transformed) return;
+            var forme = null;
+            switch (this.effectiveWeather()) {
+            case 'sunnyday':
+            case 'desolateland':
+                if (pokemon.template.speciesid !== 'castingsunny') forme = 'Casting-Sunny';
+                break;
+            case 'raindance':
+            case 'primordialsea':
+                if (pokemon.template.speciesid !== 'castingrainy') forme = 'Casting-Rainy';
+                break;
+            case 'hail':
+                if (pokemon.template.speciesid !== 'castingicy') forme = 'Casting-Icy';
+                break;
+            default:
+                if (pokemon.template.speciesid !== 'casting') forme = 'Casting';
+                break;
+            }
+            if (pokemon.isActive && forme) {
+                pokemon.formeChange(forme);
+                this.add('-formechange', pokemon, forme, '[msg]');
+            }
+        },
+onImmunity: function (type) {
+            if (type === 'Ground') return false;
+        },
+        id: "monsoonaltered",
+        name: "Monsoon-Altered",
+        rating: 3,
+        num: 300
 
 
 

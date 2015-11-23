@@ -1,6 +1,8 @@
+'use strict';
 exports.BattleAbilities = {
 
-"turnabout torrent": {
+
+"turnabouttorrent": {
 		desc: "When this Pokemon has 1/3 or more of its maximum HP, rounded down, its attacking stat is multiplied by 1.5 while using a Water-type attack.",
 		shortDesc: "When this Pokemon has 1/3 or less of its max HP, its Water attacks do 1.5x damage. Stat changes are reversed",
 		onBoost: function (boost) {
@@ -21,14 +23,14 @@ exports.BattleAbilities = {
 				return this.chainModify(1.5);
 			}
 		},
-		id: "turnabout torrent",
+		id: "turnabouttorrent",
 		name: "Turnabout Torrent",
 		rating: 2,
-		num: 67
+		num: 192
 	},
 
 
-"intimidating scales": {
+"intimidatingscales": {
 		desc: "On switch-in, this Pokemon lowers the Attack of adjacent opposing Pokemon by 1 stage. Pokemon behind a substitute are immune.",
 		shortDesc: "On switch-in, this Pokemon lowers the Attack of adjacent opponents by 1 stage.",
 		onStart: function (pokemon) {
@@ -53,14 +55,14 @@ onModifyDefPriority: 6,
 				return this.chainModify(1.5);
 			}
 		},
-		id: "intimidating scales",
+		id: "intimidatingscales",
 		name: "Intimidating Scales",
 		rating: 3.5,
-		num: 22
+		num: 193
 	},
 
 
-"huge torrent": {
+"hugetorrent": {
 		desc: "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its attacking stat is multiplied by 1.5 while using a Water-type attack.",
 		shortDesc: "When this Pokemon has 1/3 or less of its max HP, its Water attacks do 1.5x damage.",
 		onModifyAtkPriority: 5,
@@ -74,14 +76,15 @@ onModifyDefPriority: 6,
 		id: "hugetorrent",
 		name: "Huge Torrent",
 		rating: 2,
-		num: 67
+		num: 194
 	},
 
 
-	"flashfire": {
+	"flashweather": {
 		desc: "This Pokemon is immune to Fire-type moves. The first time it is hit by a Fire-type move, its attacking stat is multiplied by 1.5 while using a Fire-type attack as long as it remains active and has this Ability. If this Pokemon is frozen, it cannot be defrosted by Fire-type attacks.",
 		shortDesc: "This Pokemon's Fire attacks do 1.5x damage if hit by one Fire move; Fire immunity.",
 		onTryHit: function (target, source, move) {
+if (this.isWeather(['sunnyday', 'desolateland'])) {
 			if (target !== source && move.type === 'Fire') {
 				move.accuracy = true;
 				if (!target.addVolatile('flashfire')) {
@@ -115,14 +118,124 @@ onModifyDefPriority: 6,
 			onEnd: function (target) {
 				this.add('-end', target, 'ability: Flash Fire', '[silent]');
 			}
+},
+if (this.isWeather(['raindance', 'primordialsea'])) {
+if (target !== source && move.type === 'water') {
+				move.accuracy = true;
+				if (!target.addVolatile('flashwater')) {
+					this.add('-immune', target, '[msg]', '[from] ability: Flash water');
+				}
+				return null;
+			}
 		},
+		onEnd: function (pokemon) {
+			pokemon.removeVolatile('flashwater');
+		},
+		effect: {
+			noCopy: true, // doesn't get copied by Baton Pass
+			onStart: function (target) {
+				this.add('-start', target, 'ability: Flash water');
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk: function (atk, attacker, defender, move) {
+				if (move.type === 'water') {
+					this.debug('Flash water boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onModifySpAPriority: 5,
+			onModifySpA: function (atk, attacker, defender, move) {
+				if (move.type === 'water') {
+					this.debug('Flash water boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onEnd: function (target) {
+				this.add('-end', target, 'ability: Flash water', '[silent]');
+			}
+},
+if (this.isWeather(['hail'])) {
+if (target !== source && move.type === 'ice') {
+				move.accuracy = true;
+				if (!target.addVolatile('flashice')) {
+					this.add('-immune', target, '[msg]', '[from] ability: Flash ice');
+				}
+				return null;
+			}
+		},
+		onEnd: function (pokemon) {
+			pokemon.removeVolatile('flashice');
+		},
+		effect: {
+			noCopy: true, // doesn't get copied by Baton Pass
+			onStart: function (target) {
+				this.add('-start', target, 'ability: Flash ice');
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk: function (atk, attacker, defender, move) {
+				if (move.type === 'ice') {
+					this.debug('Flash ice boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onModifySpAPriority: 5,
+			onModifySpA: function (atk, attacker, defender, move) {
+				if (move.type === 'ice') {
+					this.debug('Flash ice boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onEnd: function (target) {
+				this.add('-end', target, 'ability: Flash ice', '[silent]');
+			}
+},
+
+if (this.isWeather(['sandstorm'])) {
+if (target !== source && move.type === 'rock') {
+				move.accuracy = true;
+				if (!target.addVolatile('flashrock')) {
+					this.add('-immune', target, '[msg]', '[from] ability: Flash rock');
+				}
+				return null;
+			}
+		},
+		onEnd: function (pokemon) {
+			pokemon.removeVolatile('flashrock');
+		},
+		effect: {
+			noCopy: true, // doesn't get copied by Baton Pass
+			onStart: function (target) {
+				this.add('-start', target, 'ability: Flash rock');
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk: function (atk, attacker, defender, move) {
+				if (move.type === 'rock') {
+					this.debug('Flash rock boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onModifySpAPriority: 5,
+			onModifySpA: function (atk, attacker, defender, move) {
+				if (move.type === 'rock') {
+					this.debug('Flash rock boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onEnd: function (target) {
+				this.add('-end', target, 'ability: Flash rock', '[silent]');
+			}
+
+},
+
+
+		
 		id: "flashfire",
 		name: "Flash Fire",
 		rating: 3,
-		num: 18
+		num: 195
 	},
 
-"rivalry": {
+"intenserivalry": {
 		desc: "This Pokemon's attacks have their power multiplied by 1.25 against targets of the same gender or multiplied by 0.75 against targets of the opposite gender. There is no modifier if either this Pokemon or the target is genderless.",
 		shortDesc: "This Pokemon's attacks do 1.25x on same gender targets; 0.75x on opposite gender.",
 		onBasePowerPriority: 8,
@@ -140,11 +253,11 @@ onStart: function (pokemon) {
 		id: "intenserivalry",
 		name: "Intense Rivalry",
 		rating: 0.5,
-		num: 79
+		num: 196
 
 		},
 
-	"intimidate": {
+	"intimidateveil": {
 		desc: "On switch-in, this Pokemon lowers the Attack of adjacent opposing Pokemon by 1 stage. Pokemon behind a substitute are immune.",
 		shortDesc: "On switch-in, this Pokemon lowers the Attack of adjacent opponents by 1 stage.",
 		onStart: function (pokemon) {
@@ -172,10 +285,10 @@ onImmunity: function (type, pokemon) {
 			}
 			}
 		},
-		id: "intimidate",
-		name: "Intimidate",
+		id: "intimidateveil",
+		name: "Intimidateveil",
 		rating: 3.5,
-		num: 22
+		num: 197
 	},
 
 
@@ -192,7 +305,7 @@ onImmunity: function (type, pokemon) {
 		id: "levipoison",
 		name: "Levipoison",
 		rating: 3.5,
-		num: 26
+		num: 198
 
 "unburden": {
 		desc: "If this Pokemon loses its held item for any reason, its Speed is doubled. This boost is lost if it switches out or gains a new item or Ability.",
@@ -210,10 +323,10 @@ return this.boost({def:-1, spd:-1});
 		id: "armorcast",
 		name: "Armor Cast",
 		rating: 3.5,
-		num: 84
+		num: 199
 	},
 
-"oblivious": {
+"obliviousabsorb": {
 		desc: "This Pokemon cannot be infatuated or taunted. Gaining this Ability while affected cures it.",
 		shortDesc: "This Pokemon cannot be infatuated or taunted. Gaining this Ability cures it.",
 		onUpdate: function (pokemon) {
@@ -241,10 +354,10 @@ return this.boost({def:-1, spd:-1});
 				return null;
 			}
 		},
-		id: "oblivious absorb",
+		id: "obliviousabsorb",
 		name: "Oblivious Absorb",
 		rating: 1,
-		num: 12
+		num: 200
 },
 
 "fear": {
@@ -271,7 +384,7 @@ onStart: function (pokemon) {
 		id: "fear",
 		name: "FEAR",
 		rating: 3,
-		num: 69
+		num: 201
 	},
 
 "cactuspower": {
@@ -288,7 +401,7 @@ if (move.type === 'Grass') {
 		id: "cactuspower",
 		name: "Cactus Power",
 		rating: 4.5,
-		num: 45
+		num: 202
 	},
 
 "snowforce": {
@@ -303,7 +416,6 @@ if (move.type === 'Grass') {
 				}
 			}
 		},
-
 	"sandyskin": {
 		desc: "This Pokemon has its major status condition cured at the end of each turn if Rain Dance is active.",
 		shortDesc: "This Pokemon has its status cured at the end of each turn if Rain Dance is active.",
@@ -319,9 +431,8 @@ if (move.type === 'Grass') {
 		id: "sandyskin",
 		name: "Sandy Skin",
 		rating: 2,
-		num: 93
+		num: 203
 	},
-
 "technicutter": {
 		desc: "This Pokemon's moves of 60 power or less have their power multiplied by 1.5. Does affect Struggle.",
 		shortDesc: "This Pokemon's moves of 60 power or less have 1.5x power. Includes Struggle.",
@@ -341,9 +452,8 @@ onBoost: function (boost, target, source, effect) {
 		id: "technicutter",
 		name: "Technicutter",
 		rating: 4,
-		num: 101
+		num: 204
 	},
-
 "chlorovolt": {
 		shortDesc: "If Electric Terrain is active, this Pokemon's Speed is multiplied by 1.5.",
 		onModifySpePriority: 6,
@@ -353,9 +463,8 @@ onBoost: function (boost, target, source, effect) {
 		id: "chlorvolt",
 		name: "Chloro Volt",
 		rating: 0.5,
-		num: 179
+		num: 205
 	},
-
 "healingfat": {
 		desc: "If this Pokemon is poisoned, it restores 1/8 of its maximum HP, rounded down, at the end of each turn instead of losing HP.",
 		shortDesc: "This Pokemon is healed by 1/8 of its max HP each turn when poisoned; no HP loss.",
@@ -380,10 +489,10 @@ onUpdate: function (pokemon) {
 		id: "healingfat",
 		name: "Healing Fat",
 		rating: 4,
-		num: 90
+		num: 206
 	},
 
-	"mummyfortitude": {
+"mummyfortitude": {
 		desc: "If this Pokemon is at full HP, it survives one hit with at least 1 HP. OHKO moves fail when used against this Pokemon.",
 		shortDesc: "If this Pokemon is at full HP, it survives one hit with at least 1 HP. Immune to OHKO.",
 		onTryHit: function (pokemon, target, move) {
@@ -402,9 +511,8 @@ onUpdate: function (pokemon) {
 		id: "mummmyfortitude",
 		name: "Mummy Fortitude",
 		rating: 3,
-		num: 5
+		num: 207
 	},
-
 	"blazingbody": {
 		desc: "If this Pokemon is at full HP, it survives one hit with at least 1 HP. OHKO moves fail when used against this Pokemon.",
 		shortDesc: "If this Pokemon is at full HP, it survives one hit with at least 1 HP. Immune to OHKO.",
@@ -438,9 +546,8 @@ onModifyAtkPriority: 5,
 		id: "blazingbody",
 		name: "blazing body",
 		rating: 3,
-		num: 5
+		num: 208
 	},
-
 "staticstorm": {
 		desc: "If Hail is active, this Pokemon restores 1/16 of its maximum HP, rounded down, at the end of each turn. This Pokemon takes no damage from Hail.",
 		shortDesc: "If Hail is active, this Pokemon heals 1/16 of its max HP each turn; immunity to Hail.",
@@ -461,9 +568,8 @@ onAfterDamage: function (damage, target, source, effect) {
 		id: "staticstorm",
 		name: "static storm",
 		rating: 1.5,
-		num: 115
+		num: 209
 	},
-
 	"dreadedflames": {
 		desc: "On switch-in, this Pokemon lowers the Attack of adjacent opposing Pokemon by 1 stage. Pokemon behind a substitute are immune.",
 		shortDesc: "On switch-in, this Pokemon lowers the Attack of adjacent opponents by 1 stage.",
@@ -500,9 +606,8 @@ onModifyAtkPriority: 5,
 		id: "dreadedflames",
 		name: "Dreaded Flames",
 		rating: 3.5,
-		num: 22
+		num: 210
 	},
-
 "rockygrowth": {
 		desc: "This Pokemon does not take recoil damage besides Struggle, Life Orb, and crash damage.",
 		shortDesc: "This Pokemon does not take recoil damage besides Struggle/Life Orb/crash damage.",
@@ -526,9 +631,8 @@ onModifyAtkPriority: 5,
 		id: "rockygrowth",
 		name: "Rocky Growth",
 		rating: 3,
-		num: 69
+		num: 211
 	},
-
 "pristine": {
 		desc: "If this Pokemon is at full HP, it survives one hit with at least 1 HP. OHKO moves fail when used against this Pokemon.",
 		shortDesc: "If this Pokemon is at full HP, it survives one hit with at least 1 HP. Immune to OHKO.",
@@ -557,9 +661,8 @@ onUpdate: function (pokemon) {
 		id: "pristine",
 		name: "Pristine",
 		rating: 3,
-		num: 5
+		num: 212
 	},
-
 "innerbody": {
 		shortDesc: "This Pokemon cannot be made to flinch.",
 		onFlinch: false,
@@ -573,9 +676,8 @@ onAfterDamage: function (damage, target, source, move) {
 		id: "innerbody",
 		name: "Inner Body",
 		rating: 1.5,
-		num: 39
+		num: 213
 	},
-
 "intimidatingfangs": {
 		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be poisoned.",
 		onAfterDamage: function (damage, target, source, move) {
@@ -600,9 +702,8 @@ onAfterDamage: function (damage, target, source, move) {
 		id: "intimidatingfangs",
 		name: "Intimidating Fangs",
 		rating: 2,
-		num: 38
+		num: 214
 	},
-
 "intimidatingabsorption": {
 		desc: "On switch-in, this Pokemon lowers the Attack of adjacent opposing Pokemon by 1 stage. Pokemon behind a substitute are immune.",
 		shortDesc: "On switch-in, this Pokemon lowers the Attack of adjacent opponents by 1 stage.",
@@ -634,7 +735,7 @@ onAfterDamage: function (damage, target, source, move) {
 		id: "intimidatingabsorption",
 		name: "Intimidating Absorption",
 		rating: 3.5,
-		num: 22
+		num: 215
 	},
 	"keenfeet": {
 		desc: "This Pokemon's Attack is raised by 2 stages for each of its stat stages that is lowered by an opposing Pokemon.",
@@ -656,11 +757,8 @@ onAfterDamage: function (damage, target, source, move) {
 		id: "keen feet",
 		name: "keen feet",
 		rating: 2.5,
-		num: 128
+		num: 216
 	},
-
-
-
 "swiftabsorb": {
 		desc: "This Pokemon is immune to water-type moves. The first time it is hit by a water-type move, its attacking stat is multiplied by 1.5 while using a water-type attack as long as it remains active and has this Ability. If this Pokemon is frozen, it cannot be defrosted by water-type attacks.",
 		shortDesc: "This Pokemon's water attacks do 1.5x damage if hit by one water move; water immunity.",
@@ -695,7 +793,7 @@ onAfterDamage: function (damage, target, source, move) {
 		id: "swiftabsorb",
 		name: "Swift Absorb",
 		rating: 3,
-		num: 18
+		num: 217
 	},
 
 "mathsurge": {
@@ -711,7 +809,7 @@ onAfterDamage: function (damage, target, source, move) {
 		id: "mathsurge",
 		name: "Math Surge",
 		rating: 2,
-		num: 68
+		num: 218
 	},
 
 "flameessence": {
@@ -734,7 +832,7 @@ onAfterDamage: function (damage, target, source, move) {
 		id: "flameessence",
 		name: "Flame Essence",
 		rating: 2,
-		num: 66
+		num: 219
 	},
 
 "naturalguard": {
@@ -749,10 +847,10 @@ pokemon.cureStatus();
 		id: "naturalguard",
 		name: "Natural Guard",
 		rating: 4,
-		num: 99
+		num: 220
 	},
 
-"sticky levitation": {
+"stickylevitation": {
 		shortDesc: "This Pokemon cannot lose its held item due to another Pokemon's attack.",
 		onTakeItem: function (item, pokemon, source) {
 			if (this.suppressingAttackEvents() && pokemon !== this.activePokemon) return;
@@ -767,7 +865,7 @@ onImmunity: function (type) {
 		id: "stickylevitation",
 		name: "Sticky Levitation",
 		rating: 1.5,
-		num: 60
+		num: 221
 	},
 
 	"serenefire": {
@@ -809,10 +907,10 @@ onImmunity: function (type) {
 		id: "serenefire",
 		name: "Serene Fire",
 		rating: 3,
-		num: 18
+		num: 222
 	},
 
-"healing blaze": {
+"healingblaze": {
 		desc: "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its attacking stat is multiplied by 1.5 while using a Fire-type attack.",
 		shortDesc: "When this Pokemon has 1/3 or less of its max HP, its Fire attacks do 1.5x damage.",
 		onModifyAtkPriority: 5,
@@ -834,7 +932,7 @@ onImmunity: function (type) {
 		id: "healingblaze",
 		name: "Healing Blaze",
 		rating: 2,
-		num: 66
+		num: 223
 	},
 
 "barbstance": {
@@ -852,7 +950,7 @@ onImmunity: function (type) {
 		id: "barbstance",
 		name: "Barb Stance",
 		rating: 5,
-		num: 176
+		num: 224
 	},
 
 "poweruppinch": {
@@ -875,7 +973,7 @@ onImmunity: function (type) {
 		id: "poweruppinch",
 		name: "Power Up Pinch",
 		rating: 2,
-		num: 66
+		num: 225
 	},
 
 "electrotechnic": {
@@ -901,9 +999,9 @@ onModifySpAPriority: 5,
 			}
 		},
 		id: "electrotechnic",
-		name: "Electro Technician",
+		name: "ElectroTechnic",
 		rating: 4,
-		num: 101
+		num: 226
 	},
 
 "speedbreak": {
@@ -914,7 +1012,7 @@ onModifySpAPriority: 5,
 		id: "speedbreak",
 		name: "Speed Break",
 		rating: 4,
-		num: 126
+		num: 227
 	},
 
 	"justicepower": {
@@ -932,10 +1030,10 @@ onDeductPP: function (damage, target, source, effect) {
 		id: "justicepower",
 		name: "Justice Power",
 		rating: 2,
-		num: 154
+		num: 228
 	},
 
-"cursed trace": {
+"cursedtrace": {
 		desc: "On switch-in, this Pokemon copies a random adjacent opposing Pokemon's Ability. If there is no Ability that can be copied at that time, this Ability will activate as soon as an Ability can be copied. Abilities that cannot be copied are Flower Gift, Forecast, Illusion, Imposter, Multitype, Stance Change, Trace, and Zen Mode.",
 		shortDesc: "On switch-in, or when it can, this Pokemon copies a random adjacent foe's Ability.",
 		onUpdate: function (pokemon) {
@@ -965,10 +1063,10 @@ onStart: function (pokemon) {
 				this.singleEvent('End', this.getAbility(pokemon.ability), pokemon.abilityData, pokemon, pokemon, 'gastroacid');
 			}
 },
-		id: "cursed trace",
+		id: "cursedtrace",
 		name: "cursed Trace",
 		rating: 3,
-		num: 36
+		num: 229
 	},
 
 
@@ -999,7 +1097,7 @@ onStart: function (pokemon) {
 		id: "sheerflight",
 		name: "Sheer Flight",
 		rating: 4,
-		num: 125
+		num: 230
 	},
 
 "evaporation": {
@@ -1066,7 +1164,7 @@ onModifyAtk: function (atk, pokemon) {
 		id: "hardbody",
 		name: "Hard Body",
 		rating: 2,
-		num: 29
+		num: 231
 	},
 
 "gutbreaker": {
@@ -1084,7 +1182,7 @@ onModifyAtkPriority: 5,
 		id: "gutbreaker",
 		name: "Gut Breaker",
 		rating: 3.5,
-		num: 104
+		num: 232
 	},
 
 "synchofloat": {
@@ -1100,10 +1198,10 @@ var oldAbility = source.setAbility('levitate', source, 'levitate', true);
 		id: "synchofloat",
 		name: "Synchofloat",
 		rating: 3.5,
-		num: 26
+		num: 233
 	},
 
-"magician's wand": {
+"magicianswand": {
 		desc: "This Pokemon is immune to Electric-type moves and raises its Special Attack by 1 stage when hit by an Electric-type move. If this Pokemon is not the target of a single-target Electric-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move.",
 		shortDesc: "This Pokemon draws Electric moves to itself to raise Sp. Atk by 1; Electric immunity.",
 		onTryHit: function (target) {
@@ -1136,7 +1234,7 @@ var oldAbility = source.setAbility('levitate', source, 'levitate', true);
 		id: "magicianswand",
 		name: "Magician's Wand",
 		rating: 3.5,
-		num: 26
+		num: 234
 	},
 
 "cleanmatch": {
@@ -1157,7 +1255,7 @@ var oldAbility = source.setAbility('levitate', source, 'levitate', true);
 		id: "cleanmatch",
 		name: "cleanmatch",
 		rating: 3.5,
-		num: 84
+		num: 235
 	},
 
 "positivegrowth": {
@@ -1173,7 +1271,7 @@ var oldAbility = source.setAbility('levitate', source, 'levitate', true);
 		id: "positive growth",
 		name: "Positive Growth",
 		rating: 2,
-		num: 68
+		num: 236
 	},
 
 "slowandsteady": {
@@ -1196,7 +1294,7 @@ onModifySpAPriority: 8,
 		id: "slowandsteady",
 		name: "Slow And Steady",
 		rating: 3.5,
-		num: 47
+		num: 237
 	},
 
 "errormacro": {
@@ -1220,7 +1318,7 @@ onModifySpAPriority: 8,
 		id: "errormacro",
 		name: "Error Macro",
 		rating: 5,
-		num: 176
+		num: 238
 	},
 
 "latebloomer": {
@@ -1237,7 +1335,7 @@ onAfterDamage: function (damage, attacker, defender, move) {
 		id: "latebloomer",
 		name: "Late Bloomer",
 		rating: 2,
-		num: 148
+		num: 239
 	},
 
 "sturdytempo": {
@@ -1270,7 +1368,7 @@ onUpdate: function (pokemon) {
 		id: "sturdytempo",
 		name: "Sturdy Tempo",
 		rating: 3,
-		num: 5
+		num: 240
 	},
 
 	"tangledflames": {
@@ -1314,7 +1412,7 @@ onUpdate: function (pokemon) {
 		id: "tangledflames",
 		name: "Tangled Flames",
 		rating: 3,
-		num: 18
+		num: 241
 	},
 
 "hydrostream": {
@@ -1325,7 +1423,7 @@ onUpdate: function (pokemon) {
 		id: "hydrostream",
 		name: "Hydro Stream",
 		rating: 4.5,
-		num: 2
+		num: 242
 	},
 
 "hydrate": {
@@ -1345,10 +1443,10 @@ onUpdate: function (pokemon) {
 				return this.chainModify([0x14CD, 0x1000]);
 			}
 		},
-		id: "refrigerate",
-		name: "Refrigerate",
+		id: "hydrate",
+		name: "Hydrate",
 		rating: 4,
-		num: 174
+		num: 243
 	},
 
 "breaker": {
@@ -1383,7 +1481,7 @@ onAnyModifyBoost: function (boosts, target) {
 		id: "breaker",
 		name: "Breaker",
 		rating: 2,
-		num: 29
+		num: 244
 	},
 
 "hammerspace": {
@@ -1395,10 +1493,10 @@ onAnyModifyBoost: function (boosts, target) {
 		id: "hammer space",
 		name: "Hammer Space",
 		rating: 4,
-		num: 144
+		num: 245
 	},
 
-"serene eyes": {
+"sereneeyes": {
 		shortDesc: "This Pokemon's moves have their secondary effect chance doubled.",
 		onModifyMovePriority: -2,
 		onModifyMove: function (move) {
@@ -1407,10 +1505,10 @@ onAnyModifyBoost: function (boosts, target) {
 				move.accuracy *= 2;
 			}
 		},
-		id: "serene eyes",
+		id: "sereneeyes",
 		name: "Serene Eyes",
 		rating: 4,
-		num: 32
+		num: 246
 	},
 
 "leafstream": {
@@ -1421,7 +1519,7 @@ onAnyModifyBoost: function (boosts, target) {
 		id: "leafstream",
 		name: "LeafStream",
 		rating: 4.5,
-		num: 70
+		num: 247
 	},
 
 "cybercriminal": {
@@ -1435,7 +1533,7 @@ onAnyModifyBoost: function (boosts, target) {
 		id: "cybercriminal",
 		name: "Cyber Criminal",
 		rating: 3.5,
-		num: 153
+		num: 248
 	},
 
 	"seamonster": {
@@ -1474,7 +1572,7 @@ onModifyAtkPriority: 5,
 		id: "seamonster",
 		name: "Sea Monster",
 		rating: 3.5,
-		num: 22
+		num: 249
 	},
 
 "underpressure": {
@@ -1499,7 +1597,7 @@ onStart: function (pokemon) {
 		id: "underpressure",
 		name: "Under Pressure",
 		rating: 2,
-		num: 93
+		num: 250
 	},
 
 "naturaleye": {
@@ -1515,7 +1613,7 @@ onStart: function (pokemon) {
 		id: "naturaleye",
 		name: "Natural Eye",
 		rating: 2,
-		num: 147
+		num: 251
 	},
 	
 	
@@ -1534,11 +1632,11 @@ onStart: function (pokemon) {
 			onResidualOrder: 18,
 			onEnd: function (pokemon) {
 				this.add('-end', pokemon, 'Embargo');
-}		
+},		
 		id: "overwhelmingpresence",
-		name: "Overwhelming Presene",
+		name: "Overwhelming Presence",
 		rating: 3.5,
-		num: 104
+		num: 252
 	},
 
 "monsoon": {
@@ -1571,7 +1669,7 @@ onStart: function (pokemon) {
         id: "monsoon",
         name: "Monsoon",
         rating: 3,
-        num: 300
+        num: 253
 
 "monsoonaltered": {
         desc: "If this Pokemon is a Casting, its type changes to the current weather condition's type, except Sandstorm.",
@@ -1606,10 +1704,8 @@ onImmunity: function (type) {
         id: "monsoonaltered",
         name: "Monsoon-Altered",
         rating: 3,
-        num: 300
-
-
-
-
+        num: 254
 
 }
+
+};

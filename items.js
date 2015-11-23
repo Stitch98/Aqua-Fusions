@@ -1,3 +1,7 @@
+'use strict';
+
+exports.BattleItems = {
+
 "swampertite": {
 		id: "swampertite",
 		name: "Swampertite",
@@ -296,7 +300,6 @@
 		gen: 6,
 		desc: "If holder is a Metagross, this item allows it to Mega Evolve in battle."
 	},
-
 "latiosite": {
 		id: "latiosite",
 		name: "Latiosite",
@@ -311,7 +314,6 @@
 		gen: 6,
 		desc: "If holder is a Latios, this item allows it to Mega Evolve in battle."
 	},
-
 "banettite": {
 		id: "banettite",
 		name: "Banettite",
@@ -326,7 +328,6 @@
 		gen: 6,
 		desc: "If holder is a Banette, this item allows it to Mega Evolve in battle."
 	},
-
 "pinsirite": {
 		id: "pinsirite",
 		name: "Pinsirite",
@@ -341,7 +342,6 @@
 		gen: 6,
 		desc: "If holder is a Pinsir, this item allows it to Mega Evolve in battle."
 	},
-
 "heracronite": {
 		id: "heracronite",
 		name: "Heracronite",
@@ -356,7 +356,6 @@
 		gen: 6,
 		desc: "If holder is a Heracross, this item allows it to Mega Evolve in battle."
 	},
-
 "manectite": {
 		id: "manectite",
 		name: "Manectite",
@@ -371,7 +370,6 @@
 		gen: 6,
 		desc: "If holder is a Manectric, this item allows it to Mega Evolve in battle."
 	},
-
 "houndoominite": {
 		id: "houndoominite",
 		name: "Houndoominite",
@@ -386,7 +384,6 @@
 		gen: 6,
 		desc: "If holder is a Houndoom, this item allows it to Mega Evolve in battle."
 	},
-
 "lopunnite": {
 		id: "lopunnite",
 		name: "Lopunnite",
@@ -401,7 +398,6 @@
 		gen: 6,
 		desc: "If holder is a Lopunny, this item allows it to Mega Evolve in battle."
 	},
-
 "audinite": {
 		id: "audinite",
 		name: "Audinite",
@@ -416,7 +412,6 @@
 		gen: 6,
 		desc: "If holder is an Audino, this item allows it to Mega Evolve in battle."
 	},
-
 	"blastoisinite": {
 		id: "blastoisinite",
 		name: "Blastoisinite",
@@ -431,7 +426,6 @@
 		gen: 6,
 		desc: "If holder is a Blastoise, this item allows it to Mega Evolve in battle."
 	},
-
 "ampharosite": {
 		id: "ampharosite",
 		name: "Ampharosite",
@@ -445,5 +439,6 @@
 		num: -6,
 		gen: 6,
 		desc: "If holder is an Ampharos, this item allows it to Mega Evolve in battle."
-	},
+	}
 
+};

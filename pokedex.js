@@ -1,3 +1,5 @@
+'use strict';
+
 exports.BattlePokedex = {
 
 swampamar:{num:-62,species:"Swampamar",types:["Dark","Water"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:103,atk:111,def:99,spa:86,spd:92,spe:76},abilities:{0:"Turnabout Torrent"},heightm:2,weightkg:75.5,color:"Blue",eggGroups:["Water 2"]}
@@ -28,7 +30,7 @@ pangleye:{num:-68,species:"Pangleye",types:["Fighting","Dark"],genderRatio:{M:0.
 pangleye-mega:{num:-68,species:"Pangleye-Mega",baseSpecies:"Pangleye-",forme:"Mega",formeLetter:"M",types:["Fighting","Dark"],baseStats:{hp:82,atk:119,def:136,spa:97,spd:128,spe:34},abilities:{0:"Magic Bounce"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Human-Like"]}
 },
 
-garchados:{num:-69,species:"Garchados",types:["Ground","Water"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:111,atk:137,def:97,spa:80,spd:102,spe:101},abilities:{0:"Intimidate"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
+garchados:{num:-69,species:"Garchados",types:["Ground","Water"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:111,atk:137,def:97,spa:80,spd:102,spe:101},abilities:{0:"Intimidate Veil"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
 },
 
 garchados-mega-x:{num:-69,species:"Garchados-Mega-X",baseSpecies:"Garchados",forme:"Mega",formeLetter:"M",types:["Ground","Water"],baseStats:{hp:111,atk:177,def:117,spa:120,spd:112,spe:91},abilities:{0:"Sand Force"},heightm:2,weightkg:75.5,color:"Brown",eggGroups:["Dragon"]}
@@ -266,7 +268,7 @@ pidgemiemega:{num:-169,species:"Pidgemie-Mega",baseSpecies:"Pidgemie",forme:"Meg
 klazor:{num:-170,species:"Klazor",types:["Bug","Steel"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:75,atk:105,def:100,spa:82,spd:85,spe:61},abilities:{0:"Math Surge"},heightm:1.8,weightkg:117.5,color:"Red",eggGroups:["Undiscovered"],otherFormes:["klazormega"]},
 klazormega:{num:-170,species:"Klazor-Mega",baseSpecies:"Klazor",forme:"Mega",formeLetter:"M",types:["Bug","Steel"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:75,atk:125,def:140,spa:92,spd:105,spe:71},abilities:{0:"Technician"},heightm:1.8,weightkg:117.5,color:"Red",eggGroups:["Undiscovered"]},
 gorecanion:{num:-171,species:"Gorecanion",types:["Water","Fire"],genderRatio:{M:0.5,F:0.5},baseStats:{hp:67,atk:97,def:112,spa:140,spd:90,spe:75},abilities:{0:"Swift Absorb"},heightm:1.7,weightkg:190.5,color:"Pink",eggGroup:["Undiscovered"]},
-}
+};
 
 
 
